@@ -5,6 +5,8 @@ It consist on making a full functional calculator app <br>
 
 Within this project I gain more familiary with sass and scss files <br>
 
+Check it out on netlify [Calculator app](https://calculatorappottoerm.netlify.app/)
+
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
