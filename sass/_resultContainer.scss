@@ -1,0 +1,28 @@
+.resultContainer {
+  height: 5.3125rem;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1.5625rem;
+  transition: background-color 0.5s ease;
+
+  div {
+    margin-right: 1.5625rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    opacity: 0.3;
+    margin: 0;
+    margin-bottom: 0.1875rem;
+    text-align: right;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    text-align: right;
+    margin: 0;
+  }
+}

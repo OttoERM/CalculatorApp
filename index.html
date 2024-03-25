@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./sass/style.css" />
+
+    <title>Calculator app</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 65%, 79%);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body class="theme1TextColor">
+    <section class="mainContainer">
+      <div class="headContainer">
+        <div class="headContainer__calc">
+          <h1>calc</h1>
+        </div>
+
+        <div class="headContainer__themeToggle">
+          <div class="headContainer__options">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+
+          <div class="headContainer__themeText">
+            <h6>THEME</h6>
+          </div>
+
+          <div class="headContainer__toggle">
+            <div
+              class="headContainer__sliderContainer theme1ToggleKeyContainer">
+              <div
+                id="toggleButton"
+                class="headContainer__toggleSwitch toggleSwitchTransition theme1BgColorToggleEqualKey"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resultContainer theme1ScreenResultContainer">
+        <div>
+          <p id="sequence"></p>
+          <h1 id="result"></h1>
+        </div>
+      </div>
+
+      <div class="keysContainer theme1ToggleKeyContainer">
+        <div>
+          <div class="theme1GeneralKeys"><p>7</p></div>
+          <div class="theme1GeneralKeys"><p>8</p></div>
+          <div class="theme1GeneralKeys"><p>9</p></div>
+          <div id="deleteKey" class="theme1DeleteResetKeys"><p>DEL</p></div>
+          <div class="theme1GeneralKeys"><p>4</p></div>
+          <div class="theme1GeneralKeys"><p>5</p></div>
+          <div class="theme1GeneralKeys"><p>6</p></div>
+          <div class="theme1GeneralKeys"><p>+</p></div>
+          <div class="theme1GeneralKeys"><p>1</p></div>
+          <div class="theme1GeneralKeys"><p>2</p></div>
+          <div class="theme1GeneralKeys"><p>3</p></div>
+          <div class="theme1GeneralKeys"><p>-</p></div>
+          <div class="theme1GeneralKeys"><p>.</p></div>
+          <div class="theme1GeneralKeys"><p>0</p></div>
+          <div class="theme1GeneralKeys"><p>/</p></div>
+          <div class="theme1GeneralKeys"><p>x</p></div>
+          <div id="resetKey" class="theme1DeleteResetKeys"><p>RESET</p></div>
+          <div id="equalKey" class="theme1EqualKey theme1BgColorToggleEqualKey">
+            <p>=</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">ElDormilon</a>.
+      </div> -->
+    </section>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

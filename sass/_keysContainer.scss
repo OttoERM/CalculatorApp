@@ -1,0 +1,56 @@
+.keysContainer {
+  height: 26.25rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.5s ease;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 1.8125rem;
+  }
+
+  > div {
+    padding: 1.4375rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 4rem) 4rem;
+    gap: 0.875rem;
+
+    div {
+      transition-property: background-color, box-shadow;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+
+      > p {
+        margin: 0;
+        font-size: 2rem;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        user-select: none;
+      }
+    }
+  }
+
+  #deleteKey {
+    > p {
+      font-size: 1.5rem;
+    }
+  }
+
+  #resetKey {
+    grid-column: 1 / 3;
+
+    > p {
+      font-size: 1.5rem;
+    }
+  }
+
+  #equalKey {
+    grid-column: 3 / 5;
+
+    > p {
+      font-size: 1.5rem;
+    }
+  }
+}

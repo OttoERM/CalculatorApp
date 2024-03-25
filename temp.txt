@@ -1,0 +1,35 @@
+var numberOperations = [];
+var decimal = false;
+
+function updateResultText(digit) {
+  let resultText = result.textContent.replaceAll(",", "");
+
+  if (resultText.length === 32 || resultText === 0) return;
+
+  let decimalPoint = "";
+  if (resultText.includes(".")) {
+    let digits = resultText.split(".");
+    resultText = digits[0];
+    decimalPoint = digits[1];
+  }
+
+  if (decimal && digit !== ".") decimalPoint = decimalPoint + digit;
+  else if (digit !== ".") resultText = resultText + digit;
+
+  //adding comas
+  let index = resultText.length;
+  let originalLength = resultText.length;
+  while (index > 0) {
+    if (index !== originalLength && (originalLength - index) % 3 == 0) {
+      resultText = resultText.slice(0, index) + "," + resultText.slice(index);
+    }
+    index--;
+  }
+
+  result.textContent = decimal ? resultText + "." + decimalPoint : resultText;
+}
+
+
+*Solucionar
+presionar equal dos o mas veces seguidas
+revisar elementos vacios en arreglo numberOperations

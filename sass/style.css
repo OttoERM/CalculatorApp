@@ -1,0 +1,297 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+@media (min-width: 90em) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+.mainContainer {
+  max-width: 31.25rem;
+  min-width: 20.3125rem;
+  flex-basis: 31.25rem;
+  padding: 1.5625rem;
+}
+
+.toggleSwitchTransition {
+  transition-property: background-color, color, margin-left;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+/* Must keep in mind the specified elements and their respectives classes which change their colors and style
+  element, body -> theme<X>TextColor
+  class, headContainer_sliderContainer -> theme<X>ToggleKeyContainer
+  id, toggleButton -> theme<X>BgColorEqualKey
+  class, resultContainer -> theme<X>ScreenResultContainer
+  class, keysContainer -> theme<X>ToggleKeyContainer
+  element, div, generalKeys -> theme<X>GeneralKeys
+  id, deleteKey/resetKey -> theme<X>DeleteResetKeys
+  id, equalKey -> theme<X>BgColorEqualKey
+  */
+.theme1TextColor {
+  background-color: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
+}
+
+.theme2TextColor {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+
+.theme3TextColor {
+  background-color: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+
+.theme1ToggleKeyContainer {
+  background-color: hsl(223, 31%, 20%);
+}
+
+.theme2ToggleKeyContainer {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.theme3ToggleKeyContainer {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.theme1ScreenResultContainer {
+  background-color: hsl(224, 36%, 15%);
+}
+
+.theme2ScreenResultContainer {
+  background-color: hsl(0, 0%, 93%);
+}
+
+.theme3ScreenResultContainer {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.theme1GeneralKeys {
+  background-color: hsl(30, 25%, 89%);
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(28, 16%, 65%);
+  color: hsl(221, 14%, 31%);
+}
+
+.theme2GeneralKeys {
+  background-color: hsl(45, 7%, 89%);
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(35, 11%, 61%);
+}
+
+.theme3GeneralKeys {
+  background-color: hsl(268, 47%, 21%);
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(290, 70%, 36%);
+}
+
+.theme1DeleteResetKeys {
+  background-color: hsl(225, 21%, 49%);
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(224, 28%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+.theme2DeleteResetKeys {
+  background-color: hsl(185, 42%, 37%);
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(185, 58%, 25%);
+  color: hsl(0, 0%, 100%);
+}
+
+.theme3DeleteResetKeys {
+  background-color: hsl(281, 89%, 26%);
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(285, 91%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+
+.theme1BgColorToggleEqualKey {
+  background-color: hsl(6, 63%, 50%);
+}
+
+.theme2BgColorToggleEqualKey {
+  background-color: hsl(25, 98%, 40%);
+}
+
+.theme3BgColorToggleEqualKey {
+  background-color: hsl(176, 100%, 44%);
+}
+
+.theme1EqualKey {
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(6, 70%, 34%);
+  color: hsl(0, 0%, 100%);
+}
+
+.theme2EqualKey {
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(25, 99%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+.theme3EqualKey {
+  border-radius: 5px;
+  box-shadow: 0 0.1875em hsl(177, 92%, 70%);
+  color: hsl(198, 20%, 13%);
+}
+
+.headContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.headContainer__calc {
+  font-size: 1.25rem;
+}
+.headContainer__calc h1 {
+  margin: 0;
+  margin-left: 0.4375rem;
+}
+.headContainer__themeToggle {
+  text-align: end;
+}
+.headContainer__options p {
+  display: inline-block;
+  font-size: 0.5625rem;
+  margin: 0;
+}
+.headContainer__options p:nth-child(-n+2) {
+  margin-right: 0.625rem;
+}
+.headContainer__options p:last-child {
+  margin-right: 0.5rem;
+}
+.headContainer__themeText {
+  display: inline-block;
+  margin-top: 0.4375rem;
+  margin-right: 1.6875rem;
+}
+.headContainer__themeText h6 {
+  margin: 0;
+}
+.headContainer__toggle {
+  float: right;
+}
+.headContainer__sliderContainer {
+  display: inline-block;
+  width: 3.75rem;
+  height: 1.375rem;
+  border-radius: 12px;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.headContainer__toggleSwitch {
+  position: absolute;
+  border-radius: 50%;
+  margin: 0.25rem 0;
+  margin-left: 0.25rem;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.headContainer__toggleSwitch:hover {
+  cursor: pointer;
+}
+
+.resultContainer {
+  height: 5.3125rem;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1.5625rem;
+  transition: background-color 0.5s ease;
+}
+.resultContainer div {
+  margin-right: 1.5625rem;
+}
+.resultContainer p {
+  font-size: 0.875rem;
+  opacity: 0.3;
+  margin: 0;
+  margin-bottom: 0.1875rem;
+  text-align: right;
+}
+.resultContainer h1 {
+  font-size: 2.25rem;
+  text-align: right;
+  margin: 0;
+}
+
+.keysContainer {
+  height: 26.25rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.5s ease;
+}
+@media (min-width: 90em) {
+  .keysContainer {
+    margin-bottom: 1.8125rem;
+  }
+}
+.keysContainer > div {
+  padding: 1.4375rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 4rem) 4rem;
+  gap: 0.875rem;
+}
+.keysContainer > div div {
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.keysContainer > div div > p {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.keysContainer #deleteKey > p {
+  font-size: 1.5rem;
+}
+.keysContainer #resetKey {
+  grid-column: 1/3;
+}
+.keysContainer #resetKey > p {
+  font-size: 1.5rem;
+}
+.keysContainer #equalKey {
+  grid-column: 3/5;
+}
+.keysContainer #equalKey > p {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
